@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Reservas - Mar de Flores{% endblock %}
+
+{% block content %}
+<div class="contenedor-principal">
+    <h1>📋 Listado de Reservas</h1>
+    
+    <!-- Muestra mensajes flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <!-- Tabla de reservas -->
+    {% if reservas %}
+    <table class="tabla-reservas">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Primer Apellido</th>
+                <th>Segundo Apellido</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reserva in reservas %}
+            <tr>
+                <td>{{ reserva.name }}</td>
+                <td>{{ reserva.first_surname }}</td>
+                <td>{{ reserva.second_surname }}</td>
+                <td>{{ reserva.check_in.strftime('%d-%m-%Y') }}</td>
+                <td>{{ reserva.check_out.strftime('%d-%m-%Y') }}</td>
+                <td>{{ reserva.mobile_phone }}</td>
+                <td>{{ reserva.email }}</td>
+                <td>
+                    <!-- Formulario para eliminar -->
+                    <form action="{{ url_for('main.eliminar_reserva', id=reserva.id) }}" method="POST">
+                        <button type="submit" class="boton-eliminar">🗑️ Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No hay reservas disponibles.</p>
+    {% endif %}
+</div>
+{% endblock %}

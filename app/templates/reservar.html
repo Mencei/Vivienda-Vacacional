@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Reserva - Mar de Flores{% endblock %}
+
+{% block content %}
+<div class="contenedor-principal">
+    <h1>📅 Formulario de Reserva</h1>
+    
+    <!-- Formulario con protección CSRF -->
+    <form method="POST" class="formulario-reserva">
+        {{ form.hidden_tag() }}  <!-- Campo oculto para el token CSRF -->
+
+        <!-- Información personal -->
+        <h2>Información Personal</h2>
+        <div class="grupo-formulario">
+            {{ form.name.label }}
+            {{ form.name(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.first_surname.label }}
+            {{ form.first_surname(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.second_surname.label }}
+            {{ form.second_surname(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.gender.label }}
+            {{ form.gender(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.date_of_birth.label }}
+            {{ form.date_of_birth(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.id_number.label }}
+            {{ form.id_number(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.nationality.label }}
+            {{ form.nationality(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.residence.label }}
+            {{ form.residence(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.mobile_phone.label }}
+            {{ form.mobile_phone(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.email.label }}
+            {{ form.email(class="campo-input") }}
+        </div>
+
+        <!-- Datos de la transacción -->
+        <h2>Datos de la Transacción</h2>
+        <div class="grupo-formulario">
+            {{ form.check_in.label }}
+            {{ form.check_in(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.check_out.label }}
+            {{ form.check_out(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.payment_type.label }}
+            {{ form.payment_type(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.payment_holder.label }}
+            {{ form.payment_holder(class="campo-input") }}
+        </div>
+        <div class="grupo-formulario">
+            {{ form.contract_reference.label }}
+            {{ form.contract_reference(class="campo-input") }}
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn btn-primary">
+            Confirmar Reserva
+        </button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra todo el contenido dentro del contenedor */
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.barra-navegacion {
+    background: #4CAF50;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.barra-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.barra-navegacion a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== TABLA DE RESERVAS ===== */
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.tabla-reservas th,
+.tabla-reservas td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-reservas th {
+    background-color: #4CAF50; /* Color verde consistente */
+    color: white; /* Texto blanco para mejor contraste */
+}
+
+/* ===== LOGOTIPO ===== */
+.logo {
+    max-width: 300px; /* Aumenta el tamaño del logotipo */
+    margin: 0 auto 20px; /* Centra el logotipo y añade margen inferior */
+    display: block;
+}
+
+/* ===== INFORMACIÓN DE LA VIVIENDA ===== */
+.informacion-vivienda {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.pie-pagina {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+    color: #555;
+}

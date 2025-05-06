@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mar de Flores{% endblock %}</title>
+    <!-- Carga el archivo CSS desde la carpeta static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Barra de navegación común a todas las páginas -->
+    <header>
+        <nav class="barra-navegacion">
+            <a href="{{ url_for('main.inicio') }}">Inicio</a>
+            <a href="{{ url_for('main.mostrar_formulario_reserva') }}">Reservar</a>
+            <a href="{{ url_for('main.listar_reservas') }}">Ver Reservas</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal que será reemplazado en cada plantilla -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Pie de página común -->
+    <footer class="pie-pagina">
+        <p>© 2024 Mar de Flores - Vivienda Vacacional</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}  <!-- Hereda de base.html -->
+
+{% block title %}Inicio{% endblock %}  <!-- Título de la página -->
+
+{% block content %}  <!-- Contenido principal -->
+<div class="contenedor-principal text-center"> <!-- Clase para centrar el contenido -->
+    <img src="{{ url_for('static', filename='images/Mardeflores.jpg') }}" alt="Logotipo Mar de Flores" class="logo">
+    <h1>Bienvenido a Mar de Flores</h1>
+    <p>Disfruta de tu estancia en nuestra vivienda vacacional.</p>
+    
+    <!-- Información adicional -->
+    <div class="informacion-vivienda">
+        <h2>Vivienda Vacacional: MAR DE FLORES</h2>
+        <p>Camino Cruzado, 73, 35309 Vega de San Mateo, Gran Canaria</p>
+        <p>Teléfono: <a href="tel:+34628059052">628059052</a></p>
+        <p>Correo electrónico: <a href="mailto:f.espinoespino72@gmail.com">f.espinoespino72@gmail.com</a></p>
+    </div>
+
+    <!-- Botón de reserva -->
+    <a href="{{ url_for('main.mostrar_formulario_reserva') }}" class="btn btn-primary mt-4">
+        🏡 Hacer Reserva
+    </a>
+</div>
+{% endblock %}

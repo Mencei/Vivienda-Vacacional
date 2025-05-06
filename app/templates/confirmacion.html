@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Confirmación - Mar de Flores{% endblock %}
+
+{% block content %}
+<div class="contenedor-principal">
+    <h1>¡Reserva Confirmada! 🌴</h1>
+    <p>Gracias por realizar su reserva. Nos pondremos en contacto con usted pronto.</p>
+    <a href="{{ url_for('main.inicio') }}" class="btn btn-primary">Volver al Inicio</a>
+</div>
+{% endblock %}
