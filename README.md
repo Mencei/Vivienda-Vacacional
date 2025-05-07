@@ -54,3 +54,32 @@ El modelo `Reserva` incluye los siguientes campos:
    ```bash
    git clone https://github.com/tu_usuario/mardeflores.git
    cd mardeflores
+
+Crea un entorno virtual (opcional pero recomendado):
+
+bash
+Copiar
+Editar
+python -m venv env
+source env/bin/activate  # En Linux/macOS
+env\Scripts\activate     # En Windows
+Instala las dependencias:
+
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+Ejecuta la aplicación:
+
+bash
+Copiar
+Editar
+flask run
+🔒 Conexión con la base de datos
+La conexión a MySQL se gestiona desde la configuración de Flask. Asegúrate de incluir tus credenciales de acceso y el nombre de la base de datos (mardeflores.db) en tu config.py o archivo .env.
+
+✅ Estado del proyecto
+Proyecto en desarrollo (versión inicial funcional).
+
+📄 Licencia
+Este proyecto es de uso educativo y personal.
